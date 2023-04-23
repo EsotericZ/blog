@@ -5,6 +5,7 @@ import Login from './pages/Login';
 import Navbar from './components/Navbar';
 import Single from './pages/Single';
 import Write from './pages/Write';
+import './style.scss';
 
 const Layout = () => {
   return (

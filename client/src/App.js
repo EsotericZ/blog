@@ -3,9 +3,9 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Navbar from './components/Navbar';
+import Post from './pages/Post';
 import Register from './pages/Register';
 import Single from './pages/Single';
-import Write from './pages/Write';
 import './style.scss';
 
 const Layout = () => {
@@ -32,8 +32,8 @@ const router = createBrowserRouter([
         element: <Single />,
       },
       { 
-        path: '/Write',
-        element: <Write />,
+        path: '/Post',
+        element: <Post />,
       },
     ]
   },

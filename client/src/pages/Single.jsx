@@ -21,6 +21,10 @@ const Single = () => {
                     </Link>
                     <img src={Delete} alt='' />
                 </div>
+                <h1>Words</h1>
+                <p>
+                    
+                </p>
             </div>
             <div className='menu'></div>
         </div>

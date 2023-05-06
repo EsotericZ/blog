@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import Delete from '../img/delete.png';
 import Edit from '../img/edit.png';
+import Menu from '../components/Menu';
 import Profile from '../img/profile.png';
 
 const Single = () => {
@@ -26,7 +27,7 @@ const Single = () => {
                     talky here
                 </p>
             </div>
-            <div className='menu'></div>
+            <Menu />
         </div>
     )
 }

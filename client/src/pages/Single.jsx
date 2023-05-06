@@ -23,7 +23,7 @@ const Single = () => {
                 </div>
                 <h1>Words</h1>
                 <p>
-                    
+                    talky here
                 </p>
             </div>
             <div className='menu'></div>

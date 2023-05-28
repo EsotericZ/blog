@@ -1,9 +1,36 @@
-import express from 'express';
-
+const express = require('express');
+const bodyParser = require('body-parser');
+const cors = require('cors');
 const app = express();
 
-app.use(express.json());
+let routes = require('./routes/api/routes');
 
-app.listen(8800, () => {
-    console.log('Server Connected')
-});
+app.use(
+    cors({
+        origin: true,
+        methods: ['GET', 'POST', 'PUT', 'DELETE'],
+        credentials: true,
+    })
+);
+
+app.use(
+    bodyParser.json({
+        verify: (req, res, buf, encoding) => {
+            try {
+                JSON.parse(buf);
+            } catch (e) {
+                res.status(404).send({
+                    status: 'error',
+                    description: 'Invalid JSON',
+                });
+                throw Error('Invalid JSON');
+            }
+        },
+    })
+);
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static("public"));
+
+app.use("/", routes);
+app.listen(3001);
